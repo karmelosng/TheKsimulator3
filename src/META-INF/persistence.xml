@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="AccessNetwork" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.karmelos.ksimulator.model.SimComponent</class>
+    <class>com.karmelos.ksimulator.model.SimLocation</class>
+    <class>com.karmelos.ksimulator.model.SimModule</class>
+    <class>com.karmelos.ksimulator.model.SimModuleType</class>
+    <class>com.karmelos.ksimulator.model.SimPoint</class>
+    <class>com.karmelos.ksimulator.model.SimState</class>
+    <class>com.karmelos.ksimulator.model.SimUser</class>
+    <properties>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="javax.persistence.jdbc.url" value=""/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.driver" value=""/>
+      <property name="javax.persistence.jdbc.user" value=""/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="Access" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.karmelos.ksimulator.model.SimComponent</class>
+    <class>com.karmelos.ksimulator.model.SimLocation</class>
+    <class>com.karmelos.ksimulator.model.SimModule</class>
+    <class>com.karmelos.ksimulator.model.SimModuleType</class>
+    <class>com.karmelos.ksimulator.model.SimPoint</class>
+    <class>com.karmelos.ksimulator.model.SimState</class>
+    <class>com.karmelos.ksimulator.model.SimUser</class>
+    <properties>
+ <!--        <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/> 
+      <property name="hibernate.connection.password" value=""/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>    
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      -->
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="root"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.connection.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>                
+    </properties>
+  </persistence-unit>
+</persistence>
